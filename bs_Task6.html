@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BS Task 2</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      #backdiv {
+        background-color: #f2f1f1;
+        margin: auto;
+        padding-left: 7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is BootStrap Task 6</h1>
+    <h2>Registration Form</h2>
+
+    <br />
+
+    <div class="container">
+      <div class="col-sm-6 pb-5" id="backdiv">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-9">
+            <label for="validationCustom01" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Name is required</div>
+          </div>
+
+          <div class="col-md-9">
+            <label for="validationCustom01" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="validationCustom01"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Email is required</div>
+          </div>
+
+          <div class="col-md-9">
+            <label for="validationCustom01" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="validationCustom01"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Password is required</div>
+          </div>
+
+          <div class="col-md-9">
+            <label for="validationCustom04" class="form-label">Hobbies</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Choose...</option>
+              <option value="explore technology">
+                Exploring New Technology
+              </option>
+              <option value="reading books">Reading Books</option>
+              <option value="skill development">
+                Personal Skills Development
+              </option>
+              <option value="entertainment">Enterntainment</option>
+            </select>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please select a Hobbie.</div>
+          </div>
+
+          <br />
+
+          <div class="col-md-9 pt-3">
+            <div class="col-12">
+              <button class="btn btn-primary col-12 bg-danger" type="submit">
+                Submit form
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
